@@ -2,11 +2,51 @@
 <head>
   <title> 내 맘대로 만드는 웹 ^-^</title>
   <meta charset="utf-8">
+  <style>
+  a {
+    color:black;
+    text-decoration: none;
+  }
+  h1 {
+    font-size:45px;
+    text-align: center;
+    border-bottom:1px solid gray;
+    margin:0;
+  }
+
+   #gong ol{
+     border-right:1px solid gray;
+     width:100px;
+     padding-left:40px;
+     margin:0;
+   }
+   body{
+     margin:0;
+   }
+   #gong {
+     display: grid;
+     grid-template-columns: 150px 1fr;
+   }
+   #guk{
+
+   }
+   @media(max-width:500px){
+     #gong {
+       display:block
+     }
+     #gong ol{
+       border-right: none;
+     }
+     h1 {
+       border-bottom:none;
+     }
+   }
+  </style>
 </head>
 <body>
   <h1> <strong>내 맘대로 만드는 웹 ^-^</strong></h1>
-
-  <p><a href = "1.html">돌아가기</a></p>
-
+  <div id="gong">
+    <p><a href = "1.html">이거눌러</a></p>
+  </div>
 </body>
 </html>

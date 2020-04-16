@@ -1,17 +1,28 @@
 <!doctype html>
 <head>
-  <title> 내 맘대로 만드는 웹 ^-^</title>
+  <title> 마음대로 만드는 웹 ^-^</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="colors.js"> </script>
 </head>
 <body>
+
+
   <h1><a href = "index.html">내 맘대로 만드는 웹 </a></h1>
   <h2> 목차 </h2>
-  <ol>
-    <li><a href ="냥이1.html"> 냥이1</a></li>
-    <li><a href ="너구리1.html"> 너구리1</a></li>
-    <li><a href ="너구리2.html"> 너구리2</a></li>
-  </ol>
-<img src="이얏호.jpg">
+  <input id="night_day" type="button" value="night"
+  onclick="nightDayHandler(this)">
+  <div id="gong">
+    <ol>
+      <li><a href ="냥이1.html"> 냥이1</a></li>
+      <li><a href ="너구리1.html"> 너구리1</a></li>
+      <li><a href ="너구리2.html"> 너구리2</a></li>
+    </ol>
+    <div>
+    <img src="이얏호.jpg">
+    </div>
+  </div>
 
 </body>
 </html>

@@ -1,16 +1,61 @@
 <!doctype html>
 <html>
   <head>
-    <title> 내 맘대로 만드는 웹 ^-^</title>
+    <title> 마음대로 만드는 웹 ^-^</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script>
+    var Links = {
+      SetColor:function(color){
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i< alist.length){
+        alist[i].style.color = color;
+        i = i + 1;
+          }
+        }
+    }
+
+    var Body = {
+      SetColor:function (color){
+        document.querySelector('body').style.color = color;
+      },
+      SetBackgroundColor:function (color){
+        document.querySelector('body').style.backgroundColor = color
+      }
+    }
+
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+        Body.SetBackgroundColor('black');
+        Body.SetColor('white');
+        self.value = 'day' ;
+        Links.SetColor('powderblue');
+      }
+        else {
+        Body.SetBackgroundColor('white');
+        Body.SetColor('black');
+        Links.SetColor('blue');
+        self.value = 'night';
+          }
+        }
+
+    </script>
   </head>
   <body>
+
+
     <h1><a href = "index.html">내 맘대로 만드는 웹 </a></h1>
     <h2> 목차 </h2>
-    <ol>
-      <li><a href ="냥이1.html"> 냥이1</a></li>
-      <li><a href ="너구리1.html"> 너구리1</a></li>
-      <li><a href ="너구리2.html"> 너구리2</a></li>
-    </ol>
+    <input id="night_day" type="button" value="night"
+    onclick="nightDayHandler(this)">
+    <div id="gong">
+      <ol>
+        <li><a href ="냥이1.html" class="saw"> 냥이1</a></li>
+        <li><a href ="너구리1.html" class="saw" id="active"> 너구리1</a></li>
+        <li><a href ="너구리2.html"> 너구리2</a></li>
+      </ol>
+    </div>
   </body>
 </html>
